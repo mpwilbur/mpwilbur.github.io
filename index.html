@@ -1,0 +1,43 @@
+---
+layout: post-index-home
+title: Michael Wilbur
+description: "Smart + Connected Cities."
+sectitle: "Welcome!"
+secdescription: "I am a PhD student in the department of Computer Science at Vanderbilt University. My work aims at making cities more assessible and efficient through intelligent software systems. Take a look at my biography and research pages for more information about me and my work."
+tags: [vanderbilt, machine, learning, artificial, intelligence, mobility, transportation]
+comments: false
+image:
+  feature: mike_headshot_2.png
+  secondary: yellowstone-complement-blue.jpg
+---
+
+{% for post in paginator.posts %}
+<article class="hentry">
+  <header>
+    {% if post.image.feature %}
+      <div class="entry-image-index">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+      </div><!-- /.entry-image -->
+    {% endif %}
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+      {% if site.reading_time %}
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        {% include read-time-index.html %}
+      </span><!-- /.entry-reading-time -->
+      {% endif %}
+    </div><!-- /.entry-meta -->
+    {% if post.link %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+    {% endif %}
+  </header>
+  <div class="entry-content">
+    {{ post.content }}
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+{% endfor %}
+
+{% include pagination.html %}
