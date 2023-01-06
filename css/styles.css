@@ -1,0 +1,73 @@
+h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.row {
+    padding: 7% 15%;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-brand {
+    padding-left: 1rem;
+}
+
+.contact {
+    padding-right: 1rem;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+.btn {
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+ol li {
+    margin: 10px 0;
+}
+
+.footer-row {
+    padding-top: 0;
+    padding-bottom: 1rem;
+    margin-top: 0;
+}
+
+#bio h1 {
+    text-align: center;
+}
+
+#bio {
+    padding: 7% 15%;
+}
+
+#headshot {
+    border-radius: 50%;
+}
+
+#research-areas {
+    text-align: center;
+}
+
+#bio-paragraph {
+    line-height: 2;
+    font-size: 1.25rem;
+}
+
+#publications {
+    padding: 0% 15% 7% 15%;
+}
+
+#footer {
+    text-align: center;
+    padding: 0% 15%;
+}
+
+.footer-row .col .btn {
+    margin: 0rem 0rem 1rem 0rem;
+}
