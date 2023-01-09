@@ -3,6 +3,10 @@ h1 {
     line-height: 1.5;
 }
 
+section ol li {
+    font-size: 1.25rem;
+}
+
 .row {
     padding: 7% 15%;
 }
